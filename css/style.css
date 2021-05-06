@@ -1,0 +1,534 @@
+/* CSS HEX 
+--ecru: #CCBF90; RGB 204, 191, 144
+--deep-space-sparkle: #4e6265;RGB  78, 98, 101
+--prussian-blue: #0f2d49; RGB 15, 45, 73
+--middle-grey: #858479; RGB 133, 132, 121
+--platinum: #E9E9E9; RGB 233, 233, 233 */
+
+.content-wrap {
+  max-width: 1080px;
+  width: 95%; /*viewport is smaller than the max width value, it switches to the width value, leaving some room around the edges*/
+  margin: 0 auto; /*no space in the top and bottom of this container = zero, left and right will be set to auto*/
+}
+* {
+  box-sizing: border-box;
+}
+body {
+    background-color: #0f2d49;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em; 
+    line-height: 1.375em;
+}
+
+a {
+    text-decoration: none;
+    color: #CCBF90;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;   
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.navigation-bar ul {  
+  margin: auto;  
+  text-align: center;
+  display:inline-block;  
+  flex-grow: 4;   
+}
+.navigation-bar li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+.navigation-bar a {
+    display: inline-block;
+    vertical-align: top;    
+    height: 80px;        
+    line-height: 80px;    
+    color: white;
+    font-size: 1.3vw;
+    padding: 0px 20px;
+    font-size: 1em;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    line-height: 1.05em;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.7em;
+    line-height: 1.05em;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4em;
+    line-height: 1.05em;
+}
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    line-height: 1.05em;
+}
+h5 {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+.statement {
+    font-size:0.875em;
+}
+
+.material-icons { 
+    font-size: 18px; 
+    color: #CCBF90;
+}
+
+/* Responsive CSS Grid Hero Image or Banner Image */
+.top-banner-section {
+  display: grid;
+  grid-template-columns: 1fr; /* stretch to the full frame*/
+  grid-template-rows: 350px; /* 350 pixels tall*/
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-content: center;
+  justify-content: center;
+}
+.banner-image-div {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+.banner-overlay-div {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.banner-text-div {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+.banner-image {
+  display: grid;
+  min-width: 350px; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 25px;  
+}
+.banner-overlay-div {
+  display: grid;
+  max-width: 100%;
+  background: black;
+  background: linear-gradient(60deg,rgba(0, 0, 0, 0.7777485994397759) 30%,rgba(255, 255, 255, 0) 100%); /* start at black at the bottom left'ish and goes at a 60% angle. This will make the white easy to read with nearly any image.*/
+  border-radius: 25px;
+}
+.banner-text-div {
+  display: grid;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 25px; 
+  border: none;      
+}
+#banner-h1-text, #banner-body-text {
+    margin: auto;
+    font-style: italic;
+}
+
+/* Main-Board Game News*/ 
+
+#boardgameNews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+    grid-template-areas: 
+    "a a a a a"
+    "b b b b c"
+    "d d d d e"
+    "d d d d w"
+    "d d d d ww";
+    grid-gap: 10px;
+}
+.maintitle {
+    grid-area: a; 
+    text-align: center; 
+    text-transform: uppercase;
+	padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.breadcrumbs {
+  grid-area: b;
+  background-color: #0F483D;
+  border: none;
+  padding: 15px 15px;
+  height: 50px;
+  width: 130px;
+  text-align: center; 
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.returntotop {
+  grid-area: c;
+  text-align: center;     
+  background-color: #170F48;
+  border: none; 
+  padding: 5px 5px;
+  height: 50px;
+  width: 140px;   
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
+}
+.newsarticle {
+    grid-area: d;    
+}
+.commentsection {
+    grid-area: e;
+    padding: 10px;
+    margin: auto;
+}
+.newsletter {
+    grid-area: w;
+    padding: 10px;
+    margin: auto;
+}
+#adCopy {
+    grid-area: ww;
+    padding: 10px;
+    margin: auto;
+}
+.thumbnail_image {
+    margin: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+}
+.articletitle {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.published {
+    font-size:0.875em;
+    text-transform: uppercase;
+}
+.published:before {
+   border-top: 1px solid #CCBF90;
+   content: '';
+   width: 350px;
+   height: 7px;
+   display: block;
+   margin: 0; 
+}
+.published:after {
+   border-top: 1px solid #CCBF90;
+   content: '';
+   width: 350px;
+   height: 7px;
+   display: block;
+   margin: 0; 
+}
+.readmore {
+  background-color: #48170F;
+  border: none;
+  padding: 15px 15px;
+  height: 50px;
+  width: 350px;
+  text-align: center; 
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.firstgame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "f g"
+        "f h"
+        "f i";
+    box-sizing: border-box;     
+    grid-gap: 5px;
+    padding: 15px;
+}
+.assasinpicture {
+    grid-area: f;  
+    margin: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.assasintitle {
+    grid-area: g;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.assasinstats {
+    grid-area: h;
+    text-align: center;
+    margin: auto;
+}
+.assasinabout {
+    grid-area: i;  
+    padding: 10px;
+    margin: auto;
+}
+.secondgame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "j m"
+        "k m"
+        "l m";
+    box-sizing: border-box;  
+    grid-gap: 5px;
+    padding: 15px;
+}
+.maglevpicture {
+    grid-area: m;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.maglevtitle {
+    grid-area: j;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.maglevstats {
+    grid-area: k;
+    text-align: center;
+    margin: auto;
+}
+.maglevabout {
+    grid-area: l;
+    padding: 10px;
+    margin: auto;
+}
+.thirdgame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "n o"
+        "n p"
+        "n q";
+    box-sizing: border-box;
+    grid-gap: 5px;
+    padding: 15px;
+}
+.residentpicture {
+    grid-area: n;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.residenttitle {
+    grid-area: o;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.residentstats {
+    grid-area: p;
+    text-align: center;
+    margin: auto;
+}
+.residentabout {
+    grid-area: q;
+    padding: 10px;
+    margin: auto;
+}
+.fourthgame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "r u"
+        "s u"
+        "t u";
+    box-sizing: border-box;   
+    grid-gap: 5px;
+    padding: 15px;
+}
+.oathpicture {
+    grid-area: u;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.oathtitle {
+    grid-area: r;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.oathstats {
+    grid-area: s;
+    text-align: center;
+    margin: auto;
+}
+.oathabout {
+    grid-area: t;
+    padding: 10px;
+    margin: auto;
+}
+.fifthgame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "v x"
+        "v y"
+        "v z";
+    box-sizing: border-box;    
+    grid-gap: 5px;
+    padding: 15px;
+}
+.westpicture {
+    grid-area: v;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.westtitle {
+    grid-area: x;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.weststats {
+    grid-area: y;
+    text-align: center;
+    margin: auto;
+}
+.westabout {
+    grid-area: z;
+    padding: 10px;
+    margin: auto;
+}
+
+/* Below - Game reviews */
+
+#gameReviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+    grid-template-areas: 
+    "a a a a a"
+    "b b b b c"
+    "d d d d d"
+    "e e f f f";   
+    grid-gap: 10px;
+}
+.reviewstitle {
+    grid-area: a; 
+    text-align: center; 
+    text-transform: uppercase;
+	padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.reviewarticle {
+    grid-area: d;
+}
+.wingspancover {
+    grid-area: e;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.wingspanpieces{
+    grid-area: f;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Below - Game videos */
+
+#gameVideos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+    grid-template-areas: 
+    "a a a a a"
+    "b b b b c"
+    "d d e e e";
+    grid-gap: 10px;
+}
+.videotitle {
+    grid-area: a; 
+    text-align: center; 
+    text-transform: uppercase;
+	padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.reviewvideo {
+    grid-area: d;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.aboutvideo {
+    grid-area: e;
+    padding: 10px;
+    margin: auto;
+}
+
+/* Below - FOOTER */
+
+footer {
+    margin: 0 -9999rem; /*Full-Width Bar Using Negative Margins*/
+    padding: 0.25rem 9999rem;
+    background-color:#CCBF90;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a a a a b"
+    "c c d d d";
+}
+.leftCol a {
+    color: black;
+}
+.rightCol .material-icons {
+    color: black; 
+}
+footer .returntotop{
+    grid-area: b;
+}
+.rightCol {
+    grid-area: c; 
+    margin: auto;
+}
+.leftCol {
+    grid-area: d;
+    margin: auto;
+}
+.leftCol h5 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 1.2em;
+}
